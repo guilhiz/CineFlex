@@ -29,6 +29,9 @@ export const Overlay = styled.div`
   width: 100%;
   transition: 0.5s ease;
   div {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
     color: white;
     font-size: 20px;
     position: absolute;

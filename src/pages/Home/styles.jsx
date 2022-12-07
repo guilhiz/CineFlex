@@ -8,6 +8,9 @@ export const Container = styled.div`
   gap: 27px 46px;
   padding: 90px 35px 35px;
   > h2 {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
     font-size: 24px;
     line-height: 28px;
     letter-spacing: 0.04em;
@@ -28,5 +31,5 @@ export const Loader = styled.div`
   border-left: 16px solid #3498db;
   width: 180px;
   height: 180px;
-  animation: ${loader} 2s linear infinite;
+  animation: ${loader} 0.8s linear infinite;
 `;
