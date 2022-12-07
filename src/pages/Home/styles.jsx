@@ -6,6 +6,7 @@ export const Container = styled.div`
   flex-wrap: wrap;
   width: 375px;
   gap: 27px 46px;
+  margin: 0px auto;
   padding: 90px 35px 35px;
   > h2 {
     font-family: "Roboto";
