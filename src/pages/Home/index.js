@@ -12,7 +12,8 @@ function Home() {
       .get("/movies")
       .then(response => setPost(response.data))
       .catch(erro => console.log(erro));
-  });
+  }, []);
+
   if (post === null) {
     return <Loader />;
   }
