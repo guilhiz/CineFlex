@@ -34,8 +34,9 @@ export const ContainerImage = styled.div`
   width: 64px;
   height: 89px;
   background: #ffffff;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
   border-radius: 2px;
+  margin-left: 10px;
   img {
     width: 48px;
     height: 72px;

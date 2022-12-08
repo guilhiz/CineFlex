@@ -5,6 +5,7 @@ export const Poster = styled.div`
   width: 129px;
   height: 193px;
   cursor: pointer;
+  box-shadow: 5px 5px 11px rgba(0, 0, 0, 0.5);
   img {
     display: block;
     width: 100%;

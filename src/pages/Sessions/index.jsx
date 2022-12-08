@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Container, Loader } from "./styles";
+import { Container, ContainerSession, Loader } from "./styles";
 import api from "../../services/api";
 
 import GlobalStyle from "../../GlobalStyle";
 import Footer from "../../components/Footer";
+import SessionDay from "../../components/SessionDay";
 
 function Sessions() {
   const [movieDay, setMovieDay] = useState(null);
@@ -25,7 +26,9 @@ function Sessions() {
     <Container>
       <GlobalStyle />
       <h2>Selecione o horário</h2>
-      <div></div>
+      <ContainerSession>
+        {movieDay.days.map(d => <SessionDay weekday={d.weekday} date={d.date} time={d.showtimes} />)}
+      </ContainerSession>
       <Footer title={movieDay.title}  posterUrl={movieDay.posterURL} />
     </Container>
   );

@@ -4,14 +4,13 @@ import Movie from "../../components/Movie";
 import GlobalStyle from "../../GlobalStyle";
 import api from "../../services/api";
 
-
 function Home() {
   const [post, setPost] = useState(null);
   useEffect(() => {
     api
       .get("/movies")
-      .then(response => setPost(response.data))
-      .catch(erro => console.log(erro));
+      .then((response) => setPost(response.data))
+      .catch((erro) => console.log(erro));
   }, []);
 
   if (post === null) {

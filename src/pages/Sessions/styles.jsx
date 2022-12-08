@@ -2,11 +2,12 @@ import styled, { keyframes } from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   width: 375px;
-  height: 100vh;
-  margin: 0px auto;
-  padding: 90px 35px 35px;
+  height: 100%;
+  margin: 67px auto 120px;
+  padding: 23px 24px 0px;
+  background-color: #fff;
   > h2 {
     font-family: "Roboto";
     font-style: normal;
@@ -15,6 +16,7 @@ export const Container = styled.div`
     line-height: 28px;
     letter-spacing: 0.04em;
     color: #293845;
+    text-align: center;
   }
 `;
 
@@ -32,4 +34,8 @@ export const Loader = styled.div`
   width: 180px;
   height: 180px;
   animation: ${loader} 0.8s linear infinite;
+`;
+
+export const ContainerSession = styled.div`
+  margin-top: 26px;
 `;
