@@ -5,9 +5,9 @@ export const Container = styled.div`
   flex-direction: column;
   width: 375px;
   height: 100%;
-  margin: 67px auto 120px;
+  margin: 67px auto 115px;
   padding: 23px 24px 0px;
-  background-color: #fff;
+  background-color: #e5e5e5;
   > h2 {
     font-family: "Roboto";
     font-style: normal;

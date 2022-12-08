@@ -5,7 +5,6 @@ export const Poster = styled.div`
   width: 129px;
   height: 193px;
   cursor: pointer;
-  box-shadow: 5px 5px 11px rgba(0, 0, 0, 0.5);
   img {
     display: block;
     width: 100%;
@@ -17,6 +16,17 @@ export const Poster = styled.div`
       height: 100%;
     }
   }
+`;
+
+export const Border = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 209px;
+  border-radius: 3px;
+  background: #ffffff;
+  box-shadow: 5px 5px 11px rgba(0, 0, 0, 0.5);
 `;
 
 export const Overlay = styled.div`

@@ -27,9 +27,11 @@ function Sessions() {
       <GlobalStyle />
       <h2>Selecione o horário</h2>
       <ContainerSession>
-        {movieDay.days.map(d => <SessionDay weekday={d.weekday} date={d.date} time={d.showtimes} />)}
+        {movieDay.days.map((d) => (
+          <SessionDay key={d.id} weekday={d.weekday} date={d.date} time={d.showtimes} />
+        ))}
       </ContainerSession>
-      <Footer title={movieDay.title}  posterUrl={movieDay.posterURL} />
+      <Footer title={movieDay.title} posterUrl={movieDay.posterURL} />
     </Container>
   );
 }
