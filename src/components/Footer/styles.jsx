@@ -16,14 +16,16 @@ export const Container = styled.div`
     justify-content: center;
     width: 287px;
     height: 89px;
-
     margin-left: 22px;
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 26px;
-    line-height: 30px;
-    color: #293845;
+    p {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 26px;
+      line-height: 30px;
+      color: #293845;
+      margin: 0px;
+    }
   }
 `;
 

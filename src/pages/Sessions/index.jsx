@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import { Container, ContainerSession, Loader } from "./styles";
 import api from "../../services/api";
 
-import GlobalStyle from "../../GlobalStyle";
 import Footer from "../../components/Footer";
 import SessionDay from "../../components/SessionDay";
 
@@ -24,7 +23,6 @@ function Sessions() {
 
   return (
     <Container>
-      <GlobalStyle />
       <h2>Selecione o horário</h2>
       <ContainerSession>
         {movieDay.days.map((d) => (
