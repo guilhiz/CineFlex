@@ -13,9 +13,9 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Sessions/:movieId" element={<Sessions />} />
-        <Route path="/Seats/:timeId" element={<SessionSeats />} />
-        <Route path="/OrderConfirmed" element={<OrderConfirmed />} />
+        <Route path="/sessoes/:movieId" element={<Sessions />} />
+        <Route path="/assentos/:timeId" element={<SessionSeats />} />{" "}
+        <Route path="/sucesso" element={<OrderConfirmed />} />
       </Routes>
     </Router>
   );
