@@ -41,7 +41,7 @@ function Seats() {
       userName,
     };
 
-    navigate("/OrderConfirmed", data);
+    navigate("/OrderConfirmed", { state: data });
   }
 
   if (movie === null) {

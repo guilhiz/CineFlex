@@ -1,0 +1,92 @@
+import styled from "styled-components";
+
+export const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 375px;
+  gap: 27px 46px;
+  margin: 0px auto;
+  padding: 100px 25px 35px;
+  background-color: #e5e5e5;
+  > h2 {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.04em;
+    color: #247a6b;
+    margin-bottom: 25px;
+  }
+`;
+
+export const ContainerInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 374px;
+  min-height: 110px;
+  margin-bottom: 12px;
+  > h3 {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.04em;
+    color: #293845;
+    margin-bottom: 14px;
+  }
+  > p {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+    color: #293845;
+    margin-bottom: 7px;
+  }
+`;
+
+export const InfoList = styled.ul`
+  display: flex;
+  flex-direction: column;
+
+  > li {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+    color: #293845;
+    margin-bottom: 7px;
+  }
+`;
+
+export const ButtonHome = styled.button`
+  width: 225px;
+  height: 42px;
+  background: #e8833a;
+  border-radius: 3px;
+  cursor: pointer;
+  border: none;
+  margin-top: 55px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+
+  :hover {
+    opacity: 0.7;
+  }
+  :active {
+    scale: 0.9;
+  }
+`;

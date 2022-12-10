@@ -6,8 +6,6 @@ import SessionSeats from "../pages/SessionSeats";
 import Sessions from "../pages/Sessions";
 import GlobalStyle from "../GlobalStyle";
 
-
-
 function App() {
   return (
     <Router>

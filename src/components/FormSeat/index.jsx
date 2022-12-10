@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Form, ContainerInput, Input, Label, SubmitButton } from "./styles";
 
-function FormSeat({handleSubmit}) {
+function FormSeat({ handleSubmit }) {
   const [cpf, setCpf] = useState("");
   const [userName, setUserName] = useState("");
 

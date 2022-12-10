@@ -8,7 +8,7 @@ export const Container = styled.div`
   gap: 27px 46px;
   margin: 0px auto;
   padding: 90px 0px 35px;
-  background-color:  #E5E5E5;
+  background-color: #e5e5e5;
   > h2 {
     font-family: "Roboto";
     font-style: normal;

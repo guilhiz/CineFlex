@@ -60,7 +60,6 @@ export const ButtonExample = styled.div`
   border: 1px solid ${(props) => props.borderColor};
 `;
 
-
 const loader = keyframes`
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
