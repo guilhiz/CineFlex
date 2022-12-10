@@ -18,11 +18,6 @@ export const Container = styled.div`
     color: #293845;
     text-align: center;
   }
-  > form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
 `;
 
 export const ContainerSeats = styled.div`
@@ -65,59 +60,6 @@ export const ButtonExample = styled.div`
   border: 1px solid ${(props) => props.borderColor};
 `;
 
-export const ContainerInput = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  > label {
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21px;
-    color: #293845;
-  }
-  > input {
-    height: 51px;
-    background: #ffffff;
-    border: 1px solid #d5d5d5;
-    border-radius: 3px;
-    margin: 5px 0px 18px;
-    padding-left: 18px;
-
-    font-family: "Roboto";
-    font-style: italic;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21px;
-    color: #afafaf;
-  }
-`;
-
-export const SubmitButton = styled.button`
-  width: 225px;
-  height: 42px;
-  background: #e8833a;
-  border-radius: 3px;
-  margin-top: 57px;
-  border: none;
-  cursor: pointer;
-
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 21px;
-  letter-spacing: 0.04em;
-  color: #ffffff;
-
-  :active {
-    scale: 0.9;
-  }
-  :hover {
-    opacity: 0.7;
-  }
-`;
 
 const loader = keyframes`
   0% { transform: rotate(0deg); }

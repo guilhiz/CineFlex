@@ -1,39 +1,41 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Footer from "../../components/Footer";
+import FormSeat from "../../components/FormSeat";
 import Seat from "../../components/Seat";
 import api from "../../services/api";
-import {
-  Container,
-  ContainerSeats,
-  ContainerExample,
-  ButtonExample,
-  ContainerInput,
-  SubmitButton,
-  Loader,
-} from "./styles";
+import { Container, ContainerSeats, ContainerExample, ButtonExample, Loader } from "./styles";
 
 function Seats() {
-  const [movieSeats, setMovieSeats] = useState(null);
+  const [movie, setMovie] = useState(null);
+  const [database, setDataBase] = useState({});
   let { timeId } = useParams();
 
   useEffect(() => {
     api
       .get(`/showtimes/${timeId}/seats`)
-      .then((response) => setMovieSeats(response.data))
+      .then((response) => setMovie(response.data))
       .catch((error) => console.log(error));
   }, [timeId]);
 
-  if (movieSeats === null) {
+  if (movie === null) {
     return <Loader />;
   }
-  console.log(movieSeats.movie.title);
+  const defaultData = {
+    title: movie.movie.title,
+    date: movie.day.date,
+    hours: movie.name,
+    username: "guilherme",
+    cpf: 121,
+    selectedSeats: [1, 2, 3],
+  };
+  console.log(defaultData);
   return (
     <Container>
       <h2>Selecione o(s) assento(s)</h2>
 
       <ContainerSeats>
-        {movieSeats.seats.map((s) => (
+        {movie.seats.map((s) => (
           <Seat key={s.id} number={s.name} isAvailable={s.isAvailable} />
         ))}
         <ContainerExample>
@@ -52,18 +54,10 @@ function Seats() {
         </ContainerExample>
       </ContainerSeats>
 
-      <form>
-        <ContainerInput>
-          <label htmlFor="name">Nome do comprador</label>
-          <input id="name" name="name" type="text" placeholder="Digete seu nome..." />
-          <label htmlFor="cpf">CPF do comprador</label>
-          <input id="cpf" name="cpf" type="text" placeholder="Digete seu CPF..." />
-        </ContainerInput>
-        <SubmitButton>Reservar assento(s)</SubmitButton>
-      </form>
+      <FormSeat />
 
-      <Footer title={movieSeats.movie.title} posterUrl={movieSeats.movie.posterURL}>
-        {`${movieSeats.day.weekday} - ${movieSeats.name}`}
+      <Footer title={movie.movie.title} posterUrl={movie.movie.posterURL}>
+        {`${movie.day.weekday} - ${movie.name}`}
       </Footer>
     </Container>
   );
