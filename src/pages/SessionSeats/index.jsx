@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import Footer from "../../components/Footer";
 import FormSeat from "../../components/FormSeat";
 import Seat from "../../components/Seat";
@@ -11,6 +11,7 @@ function Seats() {
   const [selectedSeatIds, setSelectedSeatIds] = useState([]);
   const [selectedSeatNumber, setSelectedSeatNumber] = useState([]);
   let { timeId } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     api
@@ -39,6 +40,8 @@ function Seats() {
       cpf,
       userName,
     };
+
+    navigate("/OrderConfirmed", data);
   }
 
   if (movie === null) {
