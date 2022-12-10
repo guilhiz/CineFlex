@@ -8,7 +8,8 @@ import { Container, ContainerSeats, ContainerExample, ButtonExample, Loader } fr
 
 function Seats() {
   const [movie, setMovie] = useState(null);
-  const [database, setDataBase] = useState({});
+  const [selectedSeatIds, setSelectedSeatIds] = useState([]);
+  const [selectedSeatNumber, setSelectedSeatNumber] = useState([]);
   let { timeId } = useParams();
 
   useEffect(() => {
@@ -18,25 +19,42 @@ function Seats() {
       .catch((error) => console.log(error));
   }, [timeId]);
 
+  function handleSubmit(e, cpf, userName) {
+    e.preventDefault();
+    const body = {
+      ids: selectedSeatIds,
+      name: userName,
+      cpf,
+    };
+    const data = {
+      seatNumber: selectedSeatNumber,
+      title: movie.movie.title,
+      date: movie.day.date,
+      hours: movie.name,
+      cpf,
+      userName,
+    };
+    console.log(body);
+  }
+
   if (movie === null) {
     return <Loader />;
   }
-  const defaultData = {
-    title: movie.movie.title,
-    date: movie.day.date,
-    hours: movie.name,
-    username: "guilherme",
-    cpf: 121,
-    selectedSeats: [1, 2, 3],
-  };
-  console.log(defaultData);
+
   return (
     <Container>
       <h2>Selecione o(s) assento(s)</h2>
 
       <ContainerSeats>
         {movie.seats.map((s) => (
-          <Seat key={s.id} number={s.name} isAvailable={s.isAvailable} />
+          <Seat
+            key={s.id}
+            number={s.name}
+            id={s.id}
+            isAvailable={s.isAvailable}
+            setSelectedSeatIds={setSelectedSeatIds}
+            setSelectedSeatNumber={setSelectedSeatNumber}
+          />
         ))}
         <ContainerExample>
           <div>
@@ -54,7 +72,7 @@ function Seats() {
         </ContainerExample>
       </ContainerSeats>
 
-      <FormSeat />
+      <FormSeat handleSubmit={handleSubmit} />
 
       <Footer title={movie.movie.title} posterUrl={movie.movie.posterURL}>
         {`${movie.day.weekday} - ${movie.name}`}
