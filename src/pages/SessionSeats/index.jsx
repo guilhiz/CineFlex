@@ -26,6 +26,11 @@ function Seats() {
       name: userName,
       cpf,
     };
+    api
+      .post("/seats/book-many", body)
+      .then((response) => console.log(response))
+      .catch((erro) => console.log(`Ocorreu um erro ${erro}`));
+
     const data = {
       seatNumber: selectedSeatNumber,
       title: movie.movie.title,
@@ -34,7 +39,6 @@ function Seats() {
       cpf,
       userName,
     };
-    console.log(body);
   }
 
   if (movie === null) {
