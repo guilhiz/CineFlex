@@ -9,13 +9,13 @@ function OrderConfirmed() {
   return (
     <Container>
       <h2>Pedido feito com sucesso!</h2>
-      <ContainerInfo>
+      <ContainerInfo data-test="movie-info">
         <h3>Filme e sessão</h3>
         <p>{title}</p>
         <p>{`${date} ${hours}`} </p>
       </ContainerInfo>
 
-      <ContainerInfo>
+      <ContainerInfo data-test="seats-info">
         <h3>Ingressos</h3>
         <InfoList>
           {seatNumber.map((n) => (
@@ -24,14 +24,14 @@ function OrderConfirmed() {
         </InfoList>
       </ContainerInfo>
 
-      <ContainerInfo>
+      <ContainerInfo data-test="client-info">
         <h3>Comprador</h3>
         <p>{`Nome: ${userName}`}</p>
         <p>{`CPF: ${cpf}`} </p>
       </ContainerInfo>
 
       <Link to="/">
-        <ButtonHome>Voltar pra Home</ButtonHome>
+        <ButtonHome data-test="go-home-btn">Voltar pra Home</ButtonHome>
       </Link>
     </Container>
   );

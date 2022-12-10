@@ -17,6 +17,7 @@ function FormSeat({ handleSubmit }) {
           required
           value={userName}
           onChange={(e) => setUserName(e.target.value)}
+          data-test="client-name"
         />
         <Label htmlFor="cpf">CPF do comprador</Label>
         <Input
@@ -27,9 +28,10 @@ function FormSeat({ handleSubmit }) {
           required
           value={cpf}
           onChange={(e) => setCpf(e.target.value)}
+          data-test="client-cpf"
         />
       </ContainerInput>
-      <SubmitButton type="submit">Reservar assento(s)</SubmitButton>
+      <SubmitButton data-test="book-seat-btn" type="submit">Reservar assento(s)</SubmitButton>
     </Form>
   );
 }

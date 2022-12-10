@@ -6,11 +6,11 @@ function SessionDay(props) {
   const { weekday, date, time } = props;
 
   return (
-    <Container>
+    <Container data-test="movie-day">
       <p>{`${weekday} - ${date}`}</p>
       <ContainerButton>
         {time.map((t) => (
-         <Link to={`/Seats/${t.id}`} key={t.id}><button>{t.name}</button></Link>
+         <Link data-test="showtime" to={`/Seats/${t.id}`} key={t.id}><button>{t.name}</button></Link>
         ))}
       </ContainerButton>
     </Container>

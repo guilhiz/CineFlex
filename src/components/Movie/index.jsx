@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Movie(props) {
   const { img, title, id } = props;
   return (
-    <Link to={`/Sessions/${id}`}>
+    <Link data-test="movie" to={`/Sessions/${id}`}>
       <Border>
         <Poster>
           <img src={img} alt="" />

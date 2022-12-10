@@ -16,7 +16,7 @@ function Seat(props) {
   }
 
   return (
-    <SeatButton onClick={() => handleClick()} clicked={clicked} available={isAvailable}>
+    <SeatButton data-test="seat" onClick={() => handleClick()} clicked={clicked} available={isAvailable}>
       {number}
     </SeatButton>
   );

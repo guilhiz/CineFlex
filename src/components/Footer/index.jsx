@@ -4,7 +4,7 @@ import { Container, ContainerImage } from "./styles";
 function Footer(props) {
   const { posterUrl, title, children } = props;
   return (
-    <Container>
+    <Container data-test="footer">
       <ContainerImage>
         <img src={posterUrl} alt="" />
       </ContainerImage>
