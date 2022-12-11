@@ -1,4 +1,10 @@
 import styled from "styled-components";
+import { fallingScreen } from "../../styles/animations";
+let milliseconds = 0;
+function time() {
+  milliseconds += 50;
+  return milliseconds + "ms";
+}
 
 export const Container = styled.div`
   display: flex;
@@ -12,15 +18,15 @@ export const Container = styled.div`
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
+  animation: ${fallingScreen} ${time};
   > h2 {
-    font-family: "Roboto";
-    font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 28px;
     letter-spacing: 0.04em;
     color: #247a6b;
     margin-bottom: 25px;
+    animation: ${fallingScreen} ${time};
   }
 `;
 
@@ -30,27 +36,29 @@ export const ContainerInfo = styled.div`
   width: 374px;
   min-height: 110px;
   margin-bottom: 12px;
+  animation: ${fallingScreen} ${time};
   > h3 {
-    font-family: "Roboto";
-    font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 28px;
     letter-spacing: 0.04em;
     color: #293845;
     margin-bottom: 14px;
+    animation: ${fallingScreen} ${time};
   }
 `;
 
 export const InfoList = styled.ul`
   display: flex;
   flex-direction: column;
+  animation: ${fallingScreen} ${time};
   > li {
     font-size: 22px;
     line-height: 26px;
     letter-spacing: 0.04em;
     color: #293845;
     margin-bottom: 7px;
+    animation: ${fallingScreen} ${time};
   }
 `;
 
@@ -62,6 +70,7 @@ export const ButtonHome = styled.button`
   cursor: pointer;
   border: none;
   margin-top: 55px;
+  animation: ${fallingScreen} ${time};
 
   font-size: 18px;
   line-height: 21px;
@@ -71,9 +80,11 @@ export const ButtonHome = styled.button`
 
   :hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(5px);
   }
   :active {
     scale: 0.9;
+
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   }
 `;
