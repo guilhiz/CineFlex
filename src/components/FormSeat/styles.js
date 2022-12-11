@@ -68,4 +68,10 @@ export const SubmitButton = styled.button`
   :hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
+  :disabled {
+    background-color: #8D8D8D;
+    scale: 1;
+    cursor: not-allowed;
+    margin: 57px auto 0;
+  }
 `;

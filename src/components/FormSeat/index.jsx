@@ -7,8 +7,8 @@ function FormSeat({ handleSubmit, selectedSeat}) {
   if (selectedSeat.length < 1) {
     return (
       <>
-      <h2>Escolha um assento</h2>
-      <SubmitButton>!</SubmitButton>
+      <h2>Selecione os assentos desejados</h2>
+      <SubmitButton disabled={true} >Reservar assento(s)</SubmitButton>
       </>
     )
   }
