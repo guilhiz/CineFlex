@@ -29,6 +29,7 @@ function FormSeat({ handleSubmit }) {
           value={cpf}
           onChange={(e) => setCpf(e.target.value)}
           data-test="client-cpf"
+          autoComplete="off"
         />
       </ContainerInput>
       <SubmitButton data-test="book-seat-btn" type="submit">Reservar assento(s)</SubmitButton>

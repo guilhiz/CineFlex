@@ -35,6 +35,12 @@ export const shake = keyframes`
 `;
 
 export const fallingScreen = keyframes`
-  from{opacity:0;transform: translateY(-500px)}
-  to{opacity:1;transform: translateY(0px)}
+  from{
+    opacity:0;
+    transform: translateY(-500px)
+  }
+  to{
+    opacity:1;
+    transform: translateY(0px)
+  }
 `;
