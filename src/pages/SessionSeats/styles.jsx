@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import c from "../../constants/colors"
 
 export const Container = styled.div`
   display: flex;
@@ -7,7 +8,7 @@ export const Container = styled.div`
   height: 100%;
   margin: 67px auto 115px;
   padding: 23px 20px 100px;
-  background-color: #e5e5e5;
+  background-color: ${c.background};
   > h2 {
     font-family: "Roboto";
     font-style: normal;
@@ -15,7 +16,7 @@ export const Container = styled.div`
     font-size: 24px;
     line-height: 28px;
     letter-spacing: 0.04em;
-    color: #293845;
+    color: ${c.subTitle};
     text-align: center;
   }
 `;

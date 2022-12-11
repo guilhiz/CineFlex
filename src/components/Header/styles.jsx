@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { shake } from "../../styles/animations";
+import c from "../../constants/colors"
 
 
 export const Container = styled.div`
@@ -32,7 +33,7 @@ export const Container = styled.div`
     font-weight: 400;
     font-size: 34px;
     line-height: 40px;
-    color: #e8833a;
+    color: ${c.title};
     cursor: pointer;
     user-select: none;
     :hover {

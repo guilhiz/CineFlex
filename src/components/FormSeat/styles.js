@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import c from "../../constants/colors"
 
 export const Form = styled.form`
   display: flex;
@@ -18,12 +19,12 @@ export const Label = styled.label`
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
-  color: #293845;
+  color: ${c.subTitle};
 `;
 
 export const Input = styled.input`
   height: 51px;
-  background: #ffffff;
+  background: ${c.white};
   border: 1px solid #d5d5d5;
   border-radius: 3px;
   margin: 5px 0px 18px;
@@ -35,7 +36,7 @@ export const Input = styled.input`
   font-size: 18px;
   line-height: 21px;
   letter-spacing: 0.055em;
-  color: #293845;
+  color: ${c.subTitle};
 
   ::placeholder {
     color: #afafaf;
@@ -45,7 +46,7 @@ export const Input = styled.input`
 export const SubmitButton = styled.button`
   width: 225px;
   height: 42px;
-  background: #e8833a;
+  background: ${c.title};
   border-radius: 3px;
   margin-top: 57px;
   border: none;
@@ -58,7 +59,7 @@ export const SubmitButton = styled.button`
   font-size: 18px;
   line-height: 21px;
   letter-spacing: 0.04em;
-  color: #ffffff;
+  color: ${c.white};
 
   :active {
     scale: 0.9;

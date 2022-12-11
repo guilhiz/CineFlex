@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { fallingScreen } from "../../styles/animations";
+import c from "../../constants/colors"
+
 let milliseconds = 0;
 function time() {
   milliseconds += 50;
@@ -14,7 +16,7 @@ export const Container = styled.div`
   gap: 27px 46px;
   margin: 0px auto;
   padding: 100px 25px 35px;
-  background-color: #e5e5e5;
+  background-color: ${c.background};
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -42,7 +44,7 @@ export const ContainerInfo = styled.div`
     font-size: 24px;
     line-height: 28px;
     letter-spacing: 0.04em;
-    color: #293845;
+    color: ${c.subTitle};
     margin-bottom: 14px;
     animation: ${fallingScreen} ${time};
   }
@@ -56,7 +58,7 @@ export const InfoList = styled.ul`
     font-size: 22px;
     line-height: 26px;
     letter-spacing: 0.04em;
-    color: #293845;
+    color: ${c.subTitle};
     margin-bottom: 7px;
     animation: ${fallingScreen} ${time};
   }
@@ -65,7 +67,7 @@ export const InfoList = styled.ul`
 export const ButtonHome = styled.button`
   width: 225px;
   height: 42px;
-  background: #e8833a;
+  background: ${c.title};
   border-radius: 3px;
   cursor: pointer;
   border: none;
@@ -76,7 +78,7 @@ export const ButtonHome = styled.button`
   line-height: 21px;
   text-align: center;
   letter-spacing: 0.04em;
-  color: #ffffff;
+  color: ${c.white};
 
   :hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import c from "../../constants/colors"
 
 export const Poster = styled.div`
   position: relative;
@@ -25,7 +26,7 @@ export const Border = styled.div`
   width: 140px;
   height: 209px;
   border-radius: 3px;
-  background: #ffffff;
+  background: ${c.white};
   box-shadow: 5px 5px 11px rgba(0, 0, 0, 0.5);
 `;
 

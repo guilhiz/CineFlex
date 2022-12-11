@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import c from "../../constants/colors"
 
 export const Container = styled.div`
   width: 100%;
@@ -12,7 +13,7 @@ export const Container = styled.div`
   font-size: 20px;
   line-height: 23px;
   letter-spacing: 0.02em;
-  color: #293845;
+  color: ${c.subTitle};
 `;
 
 export const ContainerButton = styled.div`
@@ -20,7 +21,7 @@ export const ContainerButton = styled.div`
   button {
     width: 83px;
     height: 43px;
-    background: #e8833a;
+    background: ${c.title};
     border-radius: 3px;
     margin-right: 8px;
     border: none;
@@ -34,7 +35,7 @@ export const ContainerButton = styled.div`
     line-height: 21px;
     text-align: center;
     letter-spacing: 0.02em;
-    color: #ffffff;
+    color: ${c.white};
     :hover {
       opacity: 0.7;
     }

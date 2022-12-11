@@ -7,7 +7,7 @@ function OrderConfirmed() {
   const { seatNumber, title, date, hours, cpf, userName } = location.state;
   const titleRef = useRef()
   useEffect(() => {
-    titleRef.current.scrollIntoView({ behavior: 'smooth' })
+    titleRef.current.scrollIntoView()
   }, []);
   return (
     <Container>

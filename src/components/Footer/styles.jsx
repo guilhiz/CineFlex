@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import c from "../../constants/colors"
 
 export const Container = styled.div`
   display: flex;
@@ -23,7 +24,7 @@ export const Container = styled.div`
       font-weight: 400;
       font-size: 26px;
       line-height: 30px;
-      color: #293845;
+      color: ${c.subTitle};
       margin: 0px;
     }
   }
@@ -35,7 +36,7 @@ export const ContainerImage = styled.div`
   justify-content: center;
   width: 64px;
   height: 89px;
-  background: #ffffff;
+  background: ${c.white};
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
   border-radius: 2px;
   margin-left: 10px;
