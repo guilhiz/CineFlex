@@ -14,7 +14,6 @@ function Header() {
         setShow(false);
       } else {
         setShow(true);
-        console.log("TRUE")
       }
       setLastScrollY(window.scrollY);
     }

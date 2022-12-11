@@ -21,6 +21,14 @@ function Seats() {
       .catch((error) => console.log(error));
   }, [timeId]);
 
+  function removeClick() {
+      let arr = [];
+      arr = selectedSeatIds.pop();
+      setSelectedSeatIds([...selectedSeatIds]);
+      arr = selectedSeatNumber.pop();
+      setSelectedSeatNumber([...selectedSeatNumber]);
+  }
+
   function handleSubmit(e, cpf, userName) {
     e.preventDefault();
     const body = {
@@ -60,6 +68,7 @@ function Seats() {
             isAvailable={s.isAvailable}
             setSelectedSeatIds={setSelectedSeatIds}
             setSelectedSeatNumber={setSelectedSeatNumber}
+            removeClick={removeClick}
           />
         ))}
         <ContainerExample>
@@ -77,9 +86,7 @@ function Seats() {
           </div>
         </ContainerExample>
       </ContainerSeats>
-
-      <FormSeat handleSubmit={handleSubmit} />
-
+      <FormSeat handleSubmit={handleSubmit} selectedSeat={selectedSeatNumber} />
       <Footer title={movie.movie.title} posterUrl={movie.movie.posterURL}>
         {`${movie.day.weekday} - ${movie.name}`}
       </Footer>

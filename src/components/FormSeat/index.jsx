@@ -1,9 +1,17 @@
 import React, { useState } from "react";
 import { Form, ContainerInput, Input, Label, SubmitButton } from "./styles";
 
-function FormSeat({ handleSubmit }) {
+function FormSeat({ handleSubmit, selectedSeat}) {
   const [cpf, setCpf] = useState("");
   const [userName, setUserName] = useState("");
+  if (selectedSeat.length < 1) {
+    return (
+      <>
+      <h2>Escolha um assento</h2>
+      <SubmitButton>!</SubmitButton>
+      </>
+    )
+  }
 
   return (
     <Form onSubmit={(e) => handleSubmit(e, cpf, userName)}>

@@ -2,14 +2,18 @@ import React, { useState } from "react";
 import { SeatButton } from "./styles";
 
 function Seat(props) {
-  const { number, isAvailable, id, setSelectedSeatIds, setSelectedSeatNumber } = props;
+  const { number, isAvailable, id, setSelectedSeatIds, setSelectedSeatNumber, removeClick } = props;
   const [clicked, setClicked] = useState(false);
 
   function handleClick() {
-    if (!isAvailable) {
-      return alert("Esse assento não está disponível");
+    if (!isAvailable) return alert("Esse assento não está disponível");
+    if (clicked) {
+      if (window.confirm("Você realmente deseja desmarcar este assento?")) {
+        removeClick();
+        setClicked(!clicked);
+        return;
+      }
     }
-
     setSelectedSeatIds((c) => [...c, id]);
     setSelectedSeatNumber((c) => [...c, number]);
     setClicked(!clicked);
