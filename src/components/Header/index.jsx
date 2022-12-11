@@ -9,7 +9,9 @@ function Header() {
   return (
     <>
       <Container>
-        {location.pathname !== "/" && <img src={arrow} alt="Previous Page" onClick={() => navigate(-1)} />}
+        {location.pathname !== "/" && (
+          <img data-test="go-home-header-btn" src={arrow} alt="Previous Page" onClick={() => navigate(-1)} />
+        )}
 
         <h1 onClick={() => navigate("/")}>CINEFLEX</h1>
       </Container>
