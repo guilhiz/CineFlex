@@ -9,7 +9,7 @@ function Seat(props) {
     if (!isAvailable) return alert("Esse assento não está disponível");
     if (clicked) {
       if (window.confirm("Você realmente deseja desmarcar este assento?")) {
-        removeClick();
+        removeClick(id, number);
         setClicked(!clicked);
         return;
       }

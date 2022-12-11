@@ -21,12 +21,16 @@ function Seats() {
       .catch((error) => console.log(error));
   }, [timeId]);
 
-  function removeClick() {
-      let arr = [];
-      arr = selectedSeatIds.pop();
-      setSelectedSeatIds([...selectedSeatIds]);
-      arr = selectedSeatNumber.pop();
-      setSelectedSeatNumber([...selectedSeatNumber]);
+  function removeClick(id, number) {
+    let i = selectedSeatIds.indexOf(id);
+    let arr = [...selectedSeatIds];
+    arr.splice(i, 1);
+    setSelectedSeatIds(arr);
+
+    i = selectedSeatNumber.indexOf(number);
+    arr = [...selectedSeatNumber];
+    arr.splice(i, 1);
+    setSelectedSeatNumber(arr);
   }
 
   function handleSubmit(e, cpf, userName) {
