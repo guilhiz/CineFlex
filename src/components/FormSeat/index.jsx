@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Form, ContainerInput, Input, Label, SubmitButton } from "./styles";
+import { cpfMask } from '../../constants/mask'
 
 function FormSeat({ handleSubmit, selectedSeat}) {
   const [cpf, setCpf] = useState("");
@@ -36,9 +37,10 @@ function FormSeat({ handleSubmit, selectedSeat}) {
           placeholder="Digete seu CPF..."
           required
           value={cpf}
-          onChange={(e) => setCpf(e.target.value)}
+          onChange={(e) => setCpf(cpfMask(e.target.value))}
           data-test="client-cpf"
           autoComplete="off"
+          maxLength="14"
         />
       </ContainerInput>
       <SubmitButton data-test="book-seat-btn" type="submit">Reservar assento(s)</SubmitButton>
