@@ -19,6 +19,9 @@ export const Container = styled.div`
     left: 0;
     margin-left: 20px;
     cursor: pointer;
+    :hover {
+      opacity: 0.7;
+    }
   }
   h1 {
     font-family: "Roboto";
@@ -28,5 +31,6 @@ export const Container = styled.div`
     line-height: 40px;
     color: #e8833a;
     cursor: pointer;
+    user-select: none;
   }
 `;

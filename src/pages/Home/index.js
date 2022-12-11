@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Container, Loader } from "./styles";
+import { Container } from "./styles";
+import { Loader } from "../../styles/animations";
 import Movie from "../../components/Movie";
 import api from "../../services/api";
 

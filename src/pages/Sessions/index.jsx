@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Container, ContainerSession, Loader } from "./styles";
+import { Container, ContainerSession } from "./styles";
+import { Loader } from "../../styles/animations";
 import api from "../../services/api";
 
 import Footer from "../../components/Footer";

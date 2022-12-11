@@ -9,6 +9,9 @@ export const Container = styled.div`
   margin: 0px auto;
   padding: 100px 25px 35px;
   background-color: #e5e5e5;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
   > h2 {
     font-family: "Roboto";
     font-style: normal;
@@ -37,26 +40,12 @@ export const ContainerInfo = styled.div`
     color: #293845;
     margin-bottom: 14px;
   }
-  > p {
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 26px;
-    letter-spacing: 0.04em;
-    color: #293845;
-    margin-bottom: 7px;
-  }
 `;
 
 export const InfoList = styled.ul`
   display: flex;
   flex-direction: column;
-
   > li {
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 400;
     font-size: 22px;
     line-height: 26px;
     letter-spacing: 0.04em;
@@ -74,9 +63,6 @@ export const ButtonHome = styled.button`
   border: none;
   margin-top: 55px;
 
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   text-align: center;
@@ -84,9 +70,10 @@ export const ButtonHome = styled.button`
   color: #ffffff;
 
   :hover {
-    opacity: 0.7;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
   :active {
     scale: 0.9;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   }
 `;

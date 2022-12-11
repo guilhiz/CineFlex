@@ -11,8 +11,10 @@ function OrderConfirmed() {
       <h2>Pedido feito com sucesso!</h2>
       <ContainerInfo data-test="movie-info">
         <h3>Filme e sessão</h3>
-        <p>{title}</p>
-        <p>{`${date} ${hours}`} </p>
+        <InfoList>
+        <li>{title}</li>
+        <li>{`${date} ${hours}`} </li>
+        </InfoList>
       </ContainerInfo>
 
       <ContainerInfo data-test="seats-info">
@@ -26,8 +28,10 @@ function OrderConfirmed() {
 
       <ContainerInfo data-test="client-info">
         <h3>Comprador</h3>
-        <p>{`Nome: ${userName}`}</p>
-        <p>{`CPF: ${cpf}`} </p>
+        <InfoList>
+        <li>{`Nome: ${userName}`}</li>
+        <li>{`CPF: ${cpf}`} </li>
+        </InfoList>
       </ContainerInfo>
 
       <Link to="/">

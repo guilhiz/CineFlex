@@ -4,7 +4,8 @@ import Footer from "../../components/Footer";
 import FormSeat from "../../components/FormSeat";
 import Seat from "../../components/Seat";
 import api from "../../services/api";
-import { Container, ContainerSeats, ContainerExample, ButtonExample, Loader } from "./styles";
+import { Container, ContainerSeats, ContainerExample, ButtonExample } from "./styles";
+import { Loader } from "../../styles/animations";
 
 function Seats() {
   const [movie, setMovie] = useState(null);
@@ -27,11 +28,6 @@ function Seats() {
       name: userName,
       cpf,
     };
-    api
-      .post("/seats/book-many", body)
-      .then((response) => console.log(response))
-      .catch((erro) => console.log(`Ocorreu um erro ${erro}`));
-
     const data = {
       seatNumber: selectedSeatNumber,
       title: movie.movie.title,
@@ -41,7 +37,10 @@ function Seats() {
       userName,
     };
 
-    navigate("/sucesso", { state: data });
+    api
+      .post("/seats/book-many", body)
+      .then(() => navigate("/sucesso", { state: data }))
+      .catch((erro) => console.log(`Ocorreu um erro ${erro}`));
   }
 
   if (movie === null) {

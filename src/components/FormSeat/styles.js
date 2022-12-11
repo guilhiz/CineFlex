@@ -30,11 +30,16 @@ export const Input = styled.input`
   padding-left: 18px;
 
   font-family: "Roboto";
-  font-style: italic;
+  font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
-  color: #afafaf;
+  letter-spacing: 0.055em;
+  color: #293845;
+
+  ::placeholder {
+    color: #afafaf;
+  }
 `;
 
 export const SubmitButton = styled.button`
@@ -46,6 +51,7 @@ export const SubmitButton = styled.button`
   border: none;
   cursor: pointer;
 
+
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -56,8 +62,10 @@ export const SubmitButton = styled.button`
 
   :active {
     scale: 0.9;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+
   }
   :hover {
-    opacity: 0.7;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
 `;
