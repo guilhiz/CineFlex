@@ -26,7 +26,7 @@ export const ContainerSeats = styled.div`
   flex-wrap: wrap;
   width: 100%;
   gap: 8px;
-  margin: 12px 0px 40px;
+  margin: 23px 0px 40px;
 `;
 
 export const ContainerExample = styled.div`

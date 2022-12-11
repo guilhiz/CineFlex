@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import arrow from "../../assets/arrow-left.png";
+import arrow from "../../assets/arrow-left1.png";
 import { useNavigate, useLocation } from "react-router-dom";
 import { Container } from "./styles";
 

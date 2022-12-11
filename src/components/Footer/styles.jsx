@@ -9,8 +9,7 @@ export const Container = styled.div`
   position: fixed;
   left: 0px;
   bottom: 0px;
-  background: #dfe6ed;
-  border: 1px solid #9eadba;
+  background: ${c.header};
   div:nth-child(2) {
     display: flex;
     flex-direction: column;
@@ -36,12 +35,16 @@ export const ContainerImage = styled.div`
   justify-content: center;
   width: 64px;
   height: 89px;
-  background: ${c.white};
+  background: #c4c4cc;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
-  border-radius: 2px;
+  border-radius: 3px;
   margin-left: 10px;
   img {
-    width: 48px;
-    height: 72px;
+    width: 57px;
+    height: 80px;
+    border-radius: 3px;
+    :hover {
+      scale: 1.1;
+    }
   }
 `;

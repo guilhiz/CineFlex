@@ -10,6 +10,7 @@ export const Poster = styled.div`
     display: block;
     width: 100%;
     height: auto;
+    border-radius: 3px;
   }
   :hover {
     scale: 1.1;
@@ -26,7 +27,7 @@ export const Border = styled.div`
   width: 140px;
   height: 209px;
   border-radius: 3px;
-  background: ${c.white};
+  background: #c4c4cc;
   box-shadow: 5px 5px 11px rgba(0, 0, 0, 0.5);
 `;
 
@@ -53,5 +54,6 @@ export const Overlay = styled.div`
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
+
   }
 `;

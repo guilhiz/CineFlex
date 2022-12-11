@@ -13,7 +13,7 @@ export const Container = styled.div`
   font-size: 20px;
   line-height: 23px;
   letter-spacing: 0.02em;
-  color: ${c.subTitle};
+  color: ${c.text};
 `;
 
 export const ContainerButton = styled.div`
@@ -21,7 +21,7 @@ export const ContainerButton = styled.div`
   button {
     width: 83px;
     height: 43px;
-    background: ${c.title};
+    background: ${c.button};
     border-radius: 3px;
     margin-right: 8px;
     border: none;

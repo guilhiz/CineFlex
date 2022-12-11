@@ -26,6 +26,7 @@ function FormSeat({ handleSubmit, selectedSeat}) {
           value={userName}
           onChange={(e) => setUserName(e.target.value)}
           data-test="client-name"
+          autoComplete="off"
         />
         <Label htmlFor="cpf">CPF do comprador</Label>
         <Input

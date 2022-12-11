@@ -13,7 +13,7 @@ export const Container = styled.div`
   width: 100%;
   min-width: 300px;
   height: 67px;
-  background: #c3cfd9;
+  background: ${c.header};
   z-index: 2;
   transition: top 0.3s;
   img {
@@ -23,6 +23,7 @@ export const Container = styled.div`
     left: 0;
     margin-left: 20px;
     cursor: pointer;
+    color: ${c.text};
     :hover {
       opacity: 0.7;
     }

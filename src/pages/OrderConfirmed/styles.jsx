@@ -44,7 +44,7 @@ export const ContainerInfo = styled.div`
     font-size: 24px;
     line-height: 28px;
     letter-spacing: 0.04em;
-    color: ${c.subTitle};
+    color: ${c.text};
     margin-bottom: 14px;
     animation: ${fallingScreen} ${time};
   }
@@ -58,7 +58,7 @@ export const InfoList = styled.ul`
     font-size: 22px;
     line-height: 26px;
     letter-spacing: 0.04em;
-    color: ${c.subTitle};
+    color: ${c.text};
     margin-bottom: 7px;
     animation: ${fallingScreen} ${time};
   }
@@ -67,7 +67,7 @@ export const InfoList = styled.ul`
 export const ButtonHome = styled.button`
   width: 225px;
   height: 42px;
-  background: ${c.title};
+  background: ${c.button};
   border-radius: 3px;
   cursor: pointer;
   border: none;
@@ -82,7 +82,6 @@ export const ButtonHome = styled.button`
 
   :hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    transform: translateY(5px);
   }
   :active {
     scale: 0.9;
