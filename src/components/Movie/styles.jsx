@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import c from "../../constants/colors"
 
 export const Poster = styled.div`
   position: relative;
@@ -54,6 +53,5 @@ export const Overlay = styled.div`
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
-
   }
 `;

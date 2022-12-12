@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import c from "../../constants/colors"
+import c from "../../constants/colors";
 
 export const Container = styled.div`
   display: flex;

@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import { Form, ContainerInput, Input, Label, SubmitButton } from "./styles";
-import { cpfMask } from '../../constants/mask'
+import { cpfMask } from "../../constants/mask";
 
-function FormSeat({ handleSubmit, selectedSeat}) {
+function FormSeat({ handleSubmit, selectedSeat }) {
   const [cpf, setCpf] = useState("");
   const [userName, setUserName] = useState("");
   if (selectedSeat.length < 1) {
     return (
       <>
-      <h2>Selecione os assentos desejados</h2>
-      <SubmitButton disabled={true} >Reservar assento(s)</SubmitButton>
+        <h2>Selecione os assentos desejados</h2>
+        <SubmitButton disabled={true}>Reservar assento(s)</SubmitButton>
       </>
-    )
+    );
   }
 
   return (
@@ -43,7 +43,9 @@ function FormSeat({ handleSubmit, selectedSeat}) {
           maxLength="14"
         />
       </ContainerInput>
-      <SubmitButton data-test="book-seat-btn" type="submit">Reservar assento(s)</SubmitButton>
+      <SubmitButton data-test="book-seat-btn" type="submit">
+        Reservar assento(s)
+      </SubmitButton>
     </Form>
   );
 }

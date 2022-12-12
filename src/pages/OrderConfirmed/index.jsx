@@ -5,9 +5,9 @@ import { Container, ContainerInfo, InfoList, ButtonHome } from "./styles";
 function OrderConfirmed() {
   const location = useLocation();
   const { seatNumber, title, date, hours, cpf, userName } = location.state;
-  const titleRef = useRef()
+  const titleRef = useRef();
   useEffect(() => {
-    titleRef.current.scrollIntoView()
+    titleRef.current.scrollIntoView();
   }, []);
   return (
     <Container>

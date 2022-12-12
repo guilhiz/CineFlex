@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import { fallingScreen } from "../../styles/animations";
-import c from "../../constants/colors"
+import c from "../../constants/colors";
 
 let milliseconds = 0;
 function time() {
-  milliseconds += 50;
+  const increaseAnimationTime = 0;
+  milliseconds += increaseAnimationTime;
   return milliseconds + "ms";
 }
 

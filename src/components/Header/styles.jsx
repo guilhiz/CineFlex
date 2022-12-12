@@ -1,14 +1,13 @@
 import styled from "styled-components";
 import { shake } from "../../styles/animations";
-import c from "../../constants/colors"
-
+import c from "../../constants/colors";
 
 export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   position: fixed;
-  top: ${props => props.show ? 0 : "-70px"};
+  top: ${(props) => (props.show ? 0 : "-70px")};
   left: 0;
   width: 100%;
   min-width: 300px;
@@ -38,7 +37,7 @@ export const Container = styled.div`
     cursor: pointer;
     user-select: none;
     :hover {
-      animation: ${shake}  0.8s linear ;
+      animation: ${shake} 0.8s linear;
     }
   }
 `;
