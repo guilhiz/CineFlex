@@ -2,13 +2,6 @@ import styled from "styled-components";
 import { fallingScreen } from "../../styles/animations";
 import c from "../../constants/colors";
 
-let milliseconds = 0;
-function time() {
-  const increaseAnimationTime = 0;
-  milliseconds += increaseAnimationTime;
-  return milliseconds + "ms";
-}
-
 export const Container = styled.div`
   display: flex;
   justify-content: center;
@@ -21,7 +14,7 @@ export const Container = styled.div`
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  animation: ${fallingScreen} ${time};
+
   > h2 {
     font-weight: 700;
     font-size: 24px;
@@ -29,7 +22,6 @@ export const Container = styled.div`
     letter-spacing: 0.04em;
     color: #247a6b;
     margin-bottom: 25px;
-    animation: ${fallingScreen} ${time};
   }
 `;
 
@@ -39,7 +31,7 @@ export const ContainerInfo = styled.div`
   width: 374px;
   min-height: 110px;
   margin-bottom: 12px;
-  animation: ${fallingScreen} ${time};
+
   > h3 {
     font-weight: 700;
     font-size: 24px;
@@ -47,21 +39,19 @@ export const ContainerInfo = styled.div`
     letter-spacing: 0.04em;
     color: ${c.text};
     margin-bottom: 14px;
-    animation: ${fallingScreen} ${time};
   }
 `;
 
 export const InfoList = styled.ul`
   display: flex;
   flex-direction: column;
-  animation: ${fallingScreen} ${time};
+
   > li {
     font-size: 22px;
     line-height: 26px;
     letter-spacing: 0.04em;
     color: ${c.text};
     margin-bottom: 7px;
-    animation: ${fallingScreen} ${time};
   }
 `;
 
@@ -73,7 +63,6 @@ export const ButtonHome = styled.button`
   cursor: pointer;
   border: none;
   margin-top: 55px;
-  animation: ${fallingScreen} ${time};
 
   font-size: 18px;
   line-height: 21px;
