@@ -13,7 +13,7 @@ function Seat(props) {
         setClicked(!clicked);
         return;
       }
-      // return;
+     return;
     }
     setSelectedSeatIds((c) => [...c, id]);
     setSelectedSeatNumber((c) => [...c, number]);
