@@ -1,4 +1,4 @@
-<h1 align="center">CINEFLEX :movie_camera:</h1>
+<h1 align="center">CINEFLEX :ticket:</h1>
 
 
 ![ZapRecall](https://user-images.githubusercontent.com/109693663/206932643-5483d6c0-6549-48a9-95f8-8ae1379e8cef.gif)
